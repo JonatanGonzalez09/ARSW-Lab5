@@ -74,6 +74,34 @@ var apimock = (function () {
           ]
       }
   ]
+  mockdata["DiomedezDiaz"] = [
+    {
+      author: "DiomedezDiaz",
+	  name: "LaPlata",
+      points: [
+        { x: 200, y: 200 },
+        { x: 400, y: 200 },
+        { x: 300, y: 100 },
+        { x: 200, y: 200 },
+        { x: 200, y: 400 },
+        { x: 400, y: 400 },
+        { x: 400, y: 200 }
+      ]
+      
+    },
+	{
+      author: "DiomedezDiaz",
+	  name: "VentanaMarroncita",
+      points: [
+        { x: 100, y: 120 },
+        { x: 50, y: 300 },
+        { x: 70, y: 100 },
+        { x: 80, y: 110 },
+        { x: 100, y: 120 }
+      ]
+      
+    }
+  ];
 
 
   return {

@@ -1,10 +1,12 @@
 /* crear un Módulo JavaScript */
+/*var apiRest = apimock;*/
+var apiRest = apiclient;
 
 var app = (function () {
 
     var getBlueprintsByAuthor = function (author) {
-        return apimock.getBlueprintsByAuthor(author, function (err, data) {
-            if (err) {
+        return apiRest.getBlueprintsByAuthor(author, function (err, data) {
+            if (author==null) {
                 return new Error("Error al consultar los blueprints:" + err)
             }
             /* console.log("lista: " + apimock.getBlueprintsByAuthor);
