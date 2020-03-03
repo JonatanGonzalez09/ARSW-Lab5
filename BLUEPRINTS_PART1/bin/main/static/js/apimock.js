@@ -10,45 +10,37 @@ var apimock = (function () {
           name: "house",
           points: [
               {
+                  x: 50,
+                  y: 50
+              },
+              {
+                  x: 50,
+                  y: 100
+              },
+              {
+                  x: 100,
+                  y: 50
+              },
+              {
                   x: 100,
                   y: 150
-              },
-              {
-                  x: 220,
-                  y: 145
-              },
-              {
-                  x: 245,
-                  y: 200
               },
               {
                   x: 50,
                   y: 50
               },
               {
-                  x: 90,
+                  x: 70,
                   y: 25
               },
               {
-                  x: 10,
-                  y: 70
+                x: 100,
+                y: 50
               },
               {
-                x: 20,
-                y: 30
+                x: 50,
+                y: 50
               },
-              {
-                x: 35,
-                y: 75
-              },
-              {
-                x: 250,
-                y: 70
-              },
-              {
-                x: 110,
-                y: 185
-              }
           ]
       },
       {
@@ -56,13 +48,29 @@ var apimock = (function () {
           name: "gear",
           points: [
               {
-                  x: 100,
-                  y: 150
+                  x: 25,
+                  y: 25
               },
               {
-                  x: 200,
-                  y: 250
-              }
+                  x: 5,
+                  y: 75
+              },
+              {
+                x: 50,
+                y: 25
+            },
+            {
+                x: 5,
+                y: 50
+            },
+            {
+                x: 50,
+                y: 75
+            },
+            {
+                x: 25,
+                y: 25
+            }
           ]
       }
   ]
@@ -72,6 +80,13 @@ var apimock = (function () {
       getBlueprintsByAuthor: function(author, callback) {
           callback(null, mockdata[author]);
       },
+
+      getBlueprintsByNameAndAuthor: function(name, author, callback ){
+        blueprint = mockdata[author].find(function(blueprint) {
+            return blueprint.name == name
+        });
+        callback(null, blueprint)
+      }
   }
 
 })();
