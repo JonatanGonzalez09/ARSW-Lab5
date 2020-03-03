@@ -9,11 +9,12 @@ var app = (function () {
             if (author==null) {
                 return new Error("Error al consultar los blueprints:" + err)
             }
-            /* console.log("lista: " + apimock.getBlueprintsByAuthor);
-            console.log("data: " + data.length);
-            console.log("data: " + data[0].name);
-            console.log("data: " + data[1].name);
-            console.log("author: " + author); */
+			alert(data);
+            console.log("lista: " + apimock.getBlueprintsByAuthor);
+            console.log("data: " + data);
+            /*console.log("data: " + data[0].name);
+            console.log("data: " + data[1].name);*/
+            console.log("author: " + author); 
 
             $('#tablaAuthor').html(author + "'s blueprints");
             var table = $('#bluePrints')
