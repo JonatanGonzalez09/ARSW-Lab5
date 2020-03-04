@@ -2,5 +2,16 @@
 
 Realizado por: Jonatan Esteban Gonzalez Rodriguez y David Eduardo Caycedo
 
+### Escuela Colombiana de Ingeniería
 
- [README.md](/BLUEPRINTS-PART1)
+### Arquitecturas de Software
+
+Desde el directorio ```/BLUEPRINTS_PART1```
+
+
+
+Para correrlo: ```gradle bootRun```
+
+http://localhost:8080
+
+
