@@ -1,6 +1,6 @@
 /* crear un Módulo JavaScript */
-/*var apiRest = apimock;*/
-var apiRest = apiclient;
+var apiRest = apimock;
+/*var apiRest = apiclient;*/
 
 var app = (function () {
 
