@@ -1,17 +1,17 @@
 /* crear un Módulo JavaScript */
-var apiRest = apimock;
-/*var apiRest = apiclient;*/
+/*var apiRest = apimock;*/
+var apiRest = apiclient;
 
 var app = (function () {
 
     var getBlueprintsByAuthor = function (author) {
-        return apiRest.getBlueprintsByAuthor(author, function (err, data) {
+        return apiRest.getBlueprintsByAuthor(author, function (data) {
             if (author==null) {
-                return new Error("Error al consultar los blueprints:" + err)
+                return new Error("Error al consultar los blueprints:")
             }
-			alert(data);
-            console.log("lista: " + apimock.getBlueprintsByAuthor);
-            console.log("data: " + data);
+			//alert(data);
+            //console.log("lista: " + apimock.getBlueprintsByAuthor);
+            //console.log("data: " + data);
             /*console.log("data: " + data[0].name);
             console.log("data: " + data[1].name);*/
             console.log("author: " + author); 
@@ -46,14 +46,14 @@ var app = (function () {
         });
     }
 
+
     var getBlueprintsByNameAndAuthor = function (author, name) {
-        return apimock.getBlueprintsByNameAndAuthor(author, name, function (err, data) {
-            if (err) {
-                return new Error("Error al consultar los blueprints:" + err)
-            }
+        return apiclient.getBlueprintsByNameAndAuthor(author, name, function (data) {
+           
             $('#nameBlueprint').html("Current blueprint: " + author);
             var canvas = $('#panelCanvas');
             var ctx = canvas[0].getContext("2d");
+            ctx.clearRect(0, 0, canvas[0].width, canvas[0].height);
             ctx.beginPath();
             ctx.moveTo(data.points[0].x, data.points[0].y);
             data.points.forEach(function (point) {
@@ -61,7 +61,7 @@ var app = (function () {
             })
             ctx.stroke();
         })
-    }
+    };
 
     return {
         getBlueprintsByAuthor: getBlueprintsByAuthor,
